@@ -11,25 +11,38 @@
 <body>
 
     <div id="calculator">
+        <div id="header">
+            <h3 id="calc-title">Calc</h3>
+            <div class="theme-selector">
+                <span>Theme</span>
+                <span>1</span>
+                <input type="range" min="1" max="3" value="1" id="theme-slider" oninput="changeTheme()" class="slider">
+                <span>2</span>
+                <span>3</span>
+            </div>
+        </div>
+
         <input id="display" readonly>
+
         <div id="keys">
-            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="clearDisplay()" class="clear-btn">C</button>
             <button onclick="appendToDisplay('4')">4</button>
             <button onclick="appendToDisplay('5')">5</button>
             <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('+')">+</button>
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
-            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('-')">–</button>
             <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="clearDisplay()" class="operator-btn">C</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button id="reset" class="clear-btn wide-btn" onclick="clearDisplay()">Reset</button>
+            <button id="equals" class="calculate-btn wide-btn" onclick="calculate()">=</button>
         </div>
     </div>
 
